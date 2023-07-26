@@ -1,0 +1,220 @@
+{
+    "menu": [
+        {
+            "name": "Dashboards",
+            "badgeClass": "badge badge-light-warning rounded-pill ms-auto me-1",
+            "icon": "home",
+            "slug": ""
+        },
+        {
+            "name": "Users",
+            "badgeClass": "badge badge-light-warning rounded-pill ms-auto me-1",
+            "icon": "user-check",
+            "slug": "",
+            "submenu": [
+                {
+                    "url": "backend/user/form",
+                    "name": "New Register",
+                    "icon": "circle",
+                    "slug": "app-invoice-list"
+                },
+                {
+                    "url": "app/invoice/preview",
+                    "name": "Approve KYC",
+                    "icon": "circle",
+                    "slug": "app-invoice-preview"
+                },
+                {
+                    "url": "backend/user/user",
+                    "name": "User List",
+                    "icon": "circle",
+                    "slug": "app-invoice-edit"
+                },
+                {
+                    "url": "app/invoice/edit",
+                    "name": "Generate Excel",
+                    "icon": "circle",
+                    "slug": "app-invoice-edit"
+                },
+                {
+                    "url": "app/invoice/edit",
+                    "name": "Search User",
+                    "icon": "circle",
+                    "slug": "app-invoice-edit"
+                },
+                {
+                    "url": "app/invoice/edit",
+                    "name": "Block User",
+                    "icon": "circle",
+                    "slug": "app-invoice-edit"
+                },
+                {
+                    "url": "app/invoice/edit",
+                    "name": "Approve User",
+                    "icon": "circle",
+                    "slug": "app-invoice-edit"
+                },
+                {
+                    "url": "app/invoice/edit",
+                    "name": "Upgrade Rank",
+                    "icon": "circle",
+                    "slug": "app-invoice-edit"
+                }
+            ]
+        },
+
+        {
+            "navheader": "Account Details",
+            "slug": ""
+        },
+        {
+            "name": "Withdraw Money",
+            "icon": "file-text",
+            "slug": "",
+            "submenu": [
+                {
+                    "url": "app/invoice/list",
+                    "name": "Pending Withdraw",
+                    "icon": "circle",
+                    "slug": "app-invoice-list"
+                },
+                {
+                    "url": "app/invoice/preview",
+                    "name": "Withdraw List",
+                    "icon": "circle",
+                    "slug": "app-invoice-preview"
+                },
+                {
+                    "url": "app/invoice/edit",
+                    "name": "Cancelled List",
+                    "icon": "circle",
+                    "slug": "app-invoice-edit"
+                }
+            ]
+        },
+        {
+            "name": "Team Structure",
+            "icon": "shield",
+            "slug": "",
+            "submenu": [
+                {
+                    "url": "app/access-roles",
+                    "name": "Tree View",
+                    "icon": "circle",
+                    "slug": "app-access-roles"
+                },
+                {
+                    "url": "app/access-permission",
+                    "name": "Downline List",
+                    "icon": "circle",
+                    "slug": "app-access-permission"
+                },
+                {
+                    "url": "app/access-permission",
+                    "name": "Referral List",
+                    "icon": "circle",
+                    "slug": "app-access-permission"
+                }
+            ]
+        },
+        {
+            "name": "Package",
+            "icon": "shopping-cart",
+            "slug": "",
+            "submenu": [
+                {
+                    "url": "app/ecommerce/shop",
+                    "name": "Add Package",
+                    "icon": "circle",
+                    "slug": "app-ecommerce-shop"
+                },
+                {
+                    "url": "app/ecommerce/details",
+                    "name": "Package List",
+                    "icon": "circle",
+                    "slug": "app-ecommerce-details"
+                },
+                {
+                    "url": "app/ecommerce/wishlist",
+                    "name": "Purchase List",
+                    "icon": "circle",
+                    "slug": "app-ecommerce-wishlist"
+                },
+                {
+                    "url": "app/ecommerce/wishlist",
+                    "name": "Upgrade List",
+                    "icon": "circle",
+                    "slug": "app-ecommerce-wishlist"
+                },
+                {
+                    "url": "app/ecommerce/wishlist",
+                    "name": "Approve Purchase",
+                    "icon": "circle",
+                    "slug": "app-ecommerce-wishlist"
+                },
+                {
+                    "url": "app/ecommerce/checkout",
+                    "name": "Approve Upgrade",
+                    "icon": "circle",
+                    "slug": "app-ecommerce-checkout"
+                }
+            ]
+        },
+        {
+            "name": "Epin",
+            "icon": "user",
+            "slug": "",
+            "submenu": [
+                {
+                    "url": "app/user/list",
+                    "name": "Epin Approval",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "Epin Generate",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "View All Epin",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                }
+            ]
+        },
+        {
+            "name": "Product",
+            "icon": "file-text",
+            "slug": "",
+            "submenu": [
+                {
+                    "url": "app/user/list",
+                    "name": "Add Product",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "Product List",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "Purchase List",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "All Order",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                }
+            ]
+        }
+    ]
+}
