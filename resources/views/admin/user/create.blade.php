@@ -1,4 +1,4 @@
-@extends('layouts/contentLayoutMaster')
+@extends('admin/layout/contentLayoutMaster')
 @section('title', 'Add User')
 @section('content')
 
