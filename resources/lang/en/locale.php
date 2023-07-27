@@ -38,6 +38,25 @@ return [
     "Block User"        => "Block User",
     "Approve User"      => "Approve User",
     "Upgrade Rank"      => "Upgrade Rank",
+    "Academy"           => "Academy",
+    "Add Academy"       => "Add Academy",
+    "Academy List"      => "Academy List",
+    "Settings"          => "Settings",
+    "App Setting"       => "App Setting",
+    "Commission Setup"  => "Commission Setup",
+    "Ewallet"           => "Ewallet",
+    "More Details"      => "More Details",
+    "News"              => "News",
+    "Upload Items"      => "Upload Items",
+    "Messages"          => "Messages",
+    "Reports"           => "Reports",
+    "Events"            => "Events",
+    "Video"             => "Video",
+    "View Faq"          => "View Faq",
+    "Support"           => "Support",
+    "All Leads"         => "All Leads",
+    "Logout"            => "Logout",
+
 
 
 

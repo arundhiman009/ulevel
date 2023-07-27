@@ -215,6 +215,331 @@
                     "slug": "app-user-list"
                 }
             ]
+        },
+        {
+            "name": "Academy",
+            "icon": "file-text",
+            "slug": "",
+            "submenu": [
+                {
+                    "url": "app/user/list",
+                    "name": "Add Academy",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "Academy List",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                }
+            ]
+        },
+        {
+            "name": "Settings",
+            "icon": "file-text",
+            "slug": "",
+            "submenu": [
+                {
+                    "url": "app/user/list",
+                    "name": "App Setting",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "Commission Setup",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "Rank Setting",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "Withdraw Setting",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "Welcome Mail Setting",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "Popup Setting",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "Maintenance Setting",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "Banner Setting",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "Bank Info",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "Language Setting",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                }
+            ]
+        },
+        {
+            "name": "Ewallet",
+            "icon": "file-text",
+            "slug": "",
+            "submenu": [
+                {
+                    "url": "app/user/list",
+                    "name": "Credit/Debit Ewallet",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "Credit List",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "Debit List",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "View Commision",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "Ewallet Summary",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "Transfer List",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                }
+            ]
+        },
+        {
+            "navheader": "More Details",
+            "slug": ""
+        },
+        {
+            "name": "News",
+            "icon": "file-text",
+            "slug": "",
+            "submenu": [
+                {
+                    "url": "app/user/list",
+                    "name": "Add News",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "View News",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                }
+            ]
+        },
+        {
+            "name": "Upload Items",
+            "icon": "file-text",
+            "slug": "",
+            "submenu": [
+                {
+                    "url": "app/user/list",
+                    "name": "Add Items",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "View Items",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                }
+            ]
+        },
+        {
+            "name": "Messages",
+            "icon": "file-text",
+            "slug": "",
+            "submenu": [
+                {
+                    "url": "app/user/list",
+                    "name": "Compose Mail",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "Sent",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                }
+            ]
+        },
+        {
+            "name": "Video",
+            "icon": "file-text",
+            "slug": "",
+            "submenu": [
+                {
+                    "url": "app/user/list",
+                    "name": "Video",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "Add Video Category",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "View Video Category",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                }
+            ]
+        },
+        {
+            "name": "Events",
+            "icon": "file-text",
+            "slug": "",
+            "submenu": [
+                {
+                    "url": "app/user/list",
+                    "name": "Add Events",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "Event List",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "View Events",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                }
+            ]
+        },
+        {
+            "name": "Reports",
+            "icon": "file-text",
+            "slug": "",
+            "submenu": [
+                {
+                    "url": "app/user/list",
+                    "name": "User Login History",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "Admin Login History",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "Payout Updates Logs",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                }
+            ]
+        },
+        {
+            "name": "View Faq",
+            "icon": "file-text",
+            "slug": "",
+            "submenu": [
+                {
+                    "url": "app/user/list",
+                    "name": "Add Faq",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "Add Category",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "View Category",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                }
+            ]
+        },
+        {
+            "name": "Support",
+            "icon": "file-text",
+            "slug": "",
+            "submenu": [
+                {
+                    "url": "app/user/list",
+                    "name": "Support",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "Tracker",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                },
+                {
+                    "url": "app/user/list",
+                    "name": "Add Department",
+                    "icon": "circle",
+                    "slug": "app-user-list"
+                }
+            ]
+        },
+        {
+            "name": "All Leads",
+            "icon": "file-text",
+            "slug": ""            
+        },
+        {
+            "name": "Logout",
+            "icon": "file-text",
+            "slug": ""            
         }
     ]
 }
