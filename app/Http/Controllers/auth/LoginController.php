@@ -9,6 +9,24 @@ use Auth;
 
 class LoginController extends Controller
 {
+
+    public function login_form(Request $request)
+    {
+        if (Auth::check()) {
+            if (auth::user()->role == 1) {
+                return redirect()->route('backend.dashboard');
+            } else if (auth::user()->role == 2) {
+                return redirect()->route('customer.dashboard');
+            } else {
+                auth::logout();
+                return redirect()->route('login_form');
+            }
+        } else {
+            return view('auth.login');
+        }
+    }
+
+
     public function login(Request $request)
     {
         $validator = User::loginValidation($request->all());
@@ -24,7 +42,7 @@ class LoginController extends Controller
         // }
         Auth::login($user);
         if (auth::user()->role == 1) {
-            return redirect()->route('admin.dashboard');
+            return redirect()->route('backend.dashboard');
         } else if (auth::user()->role == 2) {
             return redirect()->route('customer.dashboard');
         } else {

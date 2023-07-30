@@ -56,6 +56,17 @@ return [
     "Support"           => "Support",
     "All Leads"         => "All Leads",
     "Logout"            => "Logout",
+    "Register New Member"   => "Register New Member",
+    "My Income"         => "My Income",
+    "Rank"              => "Rank",
+    "Shopping"          => "Shopping",
+    "My Leads"          => "My Leads",
+    "Notification"      => "Notification",
+    "View Event"        => "View Event",
+    "News"              => "News",
+    "Logout"            => "Logout",
+    "Presenatation"     => "Presenatation",
+    "F.A.Q"             => "F.A.Q",
 
 
 

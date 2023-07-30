@@ -42,8 +42,8 @@
   <div class="shadow-bottom"></div>
   <div class="main-menu-content">
     <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-      @if(isset($menuData[0]))
-      @foreach($menuData[0]->menu as $menu)
+      @if(isset($menuData[1]))
+      @foreach($menuData[1]->menu as $menu)
       @if(isset($menu->navheader))
       <li class="navigation-header">
         <span>{{ __('locale.'.$menu->navheader) }}</span>

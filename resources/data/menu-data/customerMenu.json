@@ -1,0 +1,482 @@
+{
+    "menu": [
+        {
+            "name": "Dashboards",
+            "icon": "home",
+            "slug": ""
+        },
+        {
+            "name": "Register New Member",
+            "icon": "package",
+            "dropdown": "1",
+            "slug": ""
+        },
+        {
+            "name": "Team Structure",
+            "icon": "layers",
+            "dropdown": "1",
+            "slug": "",
+            "submenu": [
+                {
+                    "url": "ui/typography",
+                    "name": "Tree View",
+                    "icon": "type",
+                    "slug": "ui-typography"
+                },
+                {
+                    "url": "icons/feather",
+                    "name": "Referral Tree",
+                    "icon": "eye",
+                    "slug": "icons-feather"
+                },
+                {
+                    "name": "My Referral",
+                    "icon": "credit-card",
+                    "slug": ""
+                },
+                {
+                    "name": "Download List",
+                    "icon": "briefcase",
+                    "slug": ""
+                },
+                {
+                    "name": "Extensions",
+                    "icon": "box",
+                    "slug": "",
+                    "submenu": [
+                        {
+                            "url": "ext-component/sweet-alerts",
+                            "name": "Sweet Alert",
+                            "icon": "circle",
+                            "slug": "ext-component-sweet-alerts"
+                        },
+                        {
+                            "url": "ext-component/block-ui",
+                            "name": "BlockUI",
+                            "icon": "circle",
+                            "slug": "ext-component-block-ui"
+                        },
+                        {
+                            "url": "ext-component/toastr",
+                            "name": "Toastr",
+                            "icon": "circle",
+                            "slug": "ext-component-toastr"
+                        },
+                        {
+                            "url": "ext-component/sliders",
+                            "name": "Sliders",
+                            "icon": "circle",
+                            "slug": "ext-component-sliders"
+                        },
+                        {
+                            "url": "ext-component/drag-drop",
+                            "name": "Drag & Drop",
+                            "icon": "circle",
+                            "slug": "ext-component-drag-drop"
+                        },
+                        {
+                            "url": "ext-component/tour",
+                            "name": "Tour",
+                            "icon": "circle",
+                            "slug": "ext-component-tour"
+                        },
+                        {
+                            "url": "ext-component/clipboard",
+                            "name": "Clipboard",
+                            "icon": "circle",
+                            "slug": "ext-component-clipboard"
+                        },
+                        {
+                            "url": "ext-component/plyr",
+                            "name": "Media Player",
+                            "icon": "circle",
+                            "slug": "ext-component-plyr"
+                        },
+                        {
+                            "url": "ext-component/context-menu",
+                            "name": "Context Menu",
+                            "icon": "circle",
+                            "slug": "ext-component-context-menu"
+                        },
+                        {
+                            "url": "ext-component/swiper",
+                            "name": "Swiper",
+                            "icon": "circle",
+                            "slug": "ext-component-swiper"
+                        },
+                        {
+                            "url": "ext-component/tree",
+                            "name": "Tree",
+                            "icon": "circle",
+                            "slug": "ext-component-tree"
+                        },
+                        {
+                            "url": "ext-component/ratings",
+                            "name": "Ratings",
+                            "icon": "circle",
+                            "slug": "ext-component-ratings"
+                        },
+                        {
+                            "url": "ext-component/locale",
+                            "name": "Locale",
+                            "icon": "circle",
+                            "slug": "ext-component-locale"
+                        }
+                    ]
+                },
+                {
+                    "name": "Page Layouts",
+                    "icon": "layout",
+                    "slug": "",
+                    "submenu": [
+                        {
+                            "url": "page-layouts/full",
+                            "name": "Layout Full",
+                            "icon": "circle",
+                            "slug": "layout-full"
+                        },
+                        {
+                            "url": "page-layouts/without-menu",
+                            "name": "Without Menu",
+                            "icon": "circle",
+                            "slug": "layout-without-menu"
+                        },
+                        {
+                            "url": "page-layouts/empty",
+                            "name": "Layout Empty",
+                            "icon": "circle",
+                            "slug": "layout-empty"
+                        },
+                        {
+                            "url": "page-layouts/blank",
+                            "name": "Layout Blank",
+                            "icon": "circle",
+                            "slug": "layout-blank"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "navheader": "Account Details",
+            "slug": ""
+        },
+        {
+            "name": "Account",
+            "icon": "edit",
+            "dropdown": "1",
+            "slug": "",
+            "submenu": [
+                {
+                    "name": "Profile",
+                    "icon": "copy",
+                    "slug": ""
+                },
+                {
+                    "url": "form/layout",
+                    "name": "Upload Kyc",
+                    "icon": "box",
+                    "slug": "form-layout"
+                },
+                {
+                    "url": "form/wizard",
+                    "name": "Transaction Password",
+                    "icon": "package",
+                    "slug": "form-wizard"
+                },
+                {
+                    "url": "form/validation",
+                    "name": "Change Password",
+                    "icon": "check-circle",
+                    "slug": "form-validation"
+                },
+                {
+                    "url": "form/repeater",
+                    "name": "Reset Transaction Password",
+                    "icon": "check-circle",
+                    "slug": "form-repeater"
+                },
+                {
+                    "url": "table",
+                    "name": "Enable 2FA",
+                    "icon": "server",
+                    "slug": "table"
+                },
+                {
+                    "name": "Referral Link",
+                    "icon": "grid",
+                    "slug": ""
+                }
+            ]
+        },
+        {
+            "name": "My Income",
+            "icon": "file-text",
+            "dropdown": "1",
+            "slug": "",
+            "submenu": [
+                {
+                    "name": "All Commission",
+                    "icon": "unlock",
+                    "slug": ""
+                },
+                {
+                    "name": "Direct Referrals",
+                    "icon": "settings",
+                    "slug": ""
+                },
+                {
+                    "url": "page/profile",
+                    "name": "Level Bonus",
+                    "icon": "user",
+                    "slug": "page-profile"
+                },
+                {
+                    "url": "page/faq",
+                    "name": "Rank Bonus",
+                    "icon": "help-circle",
+                    "slug": "page-faq"
+                }
+            ]
+        },
+        {
+            "name": "Epin",
+            "icon": "box",
+            "dropdown": "1",
+            "slug": "",
+            "submenu": [
+                {
+                    "name": "My Epin",
+                    "icon": "menu",
+                    "slug": ""
+                },
+                {
+                    "name": "Epin Request",
+                    "icon": "eye-off",
+                    "classlist": "disabled",
+                    "slug": "disabled"
+                }
+            ]
+        },
+        {
+            "name": "Package",
+            "icon": "box",
+            "dropdown": "1",
+            "slug": "",
+            "submenu": [
+                {
+                    "name": "Repurchase",
+                    "icon": "menu",
+                    "slug": ""
+                },
+                {
+                    "name": "Upgrade",
+                    "icon": "eye-off",
+                    "classlist": "disabled",
+                    "slug": "disabled"
+                },
+                {
+                    "name": "Purchased List",
+                    "icon": "eye-off",
+                    "classlist": "disabled",
+                    "slug": "disabled"
+                },
+                {
+                    "name": "Upgrade List",
+                    "icon": "eye-off",
+                    "classlist": "disabled",
+                    "slug": "disabled"
+                }
+            ]
+        },
+        {
+            "name": "Rank",
+            "icon": "box",
+            "dropdown": "1",
+            "slug": "",
+            "submenu": [
+                {
+                    "name": "Rank List",
+                    "icon": "menu",
+                    "slug": ""
+                },
+                {
+                    "name": "Rank Summary",
+                    "icon": "eye-off",
+                    "classlist": "disabled",
+                    "slug": "disabled"
+                }
+            ]
+        },
+        {
+            "name": "Shopping",
+            "icon": "box",
+            "dropdown": "1",
+            "slug": "",
+            "submenu": [
+                {
+                    "name": "Buy Product",
+                    "icon": "menu",
+                    "slug": ""
+                },
+                {
+                    "name": "Wish List",
+                    "icon": "eye-off",
+                    "classlist": "disabled",
+                    "slug": "disabled"
+                },
+                {
+                    "name": "Purchase List",
+                    "icon": "eye-off",
+                    "classlist": "disabled",
+                    "slug": "disabled"
+                },
+                {
+                    "name": "Orders",
+                    "icon": "eye-off",
+                    "classlist": "disabled",
+                    "slug": "disabled"
+                }
+            ]
+        },
+        {
+            "name": "Academy",
+            "icon": "box",
+            "dropdown": "1",
+            "slug": "",
+            "submenu": [
+                {
+                    "name": "Academy List",
+                    "icon": "menu",
+                    "slug": ""
+                }
+            ]
+        },
+        {
+            "name": "Ewallet",
+            "icon": "box",
+            "dropdown": "1",
+            "slug": "",
+            "submenu": [
+                {
+                    "name": "Summary",
+                    "icon": "menu",
+                    "slug": ""
+                },
+                {
+                    "name": "Withdraw Money",
+                    "icon": "menu",
+                    "slug": ""
+                },
+                {
+                    "name": "Withdraw Summary",
+                    "icon": "menu",
+                    "slug": ""
+                },
+                {
+                    "name": "Cancelled Withdraw",
+                    "icon": "menu",
+                    "slug": ""
+                },
+                {
+                    "name": "Transfer Money",
+                    "icon": "menu",
+                    "slug": ""
+                },
+                {
+                    "name": "Transfer List",
+                    "icon": "menu",
+                    "slug": ""
+                }
+            ]
+        },
+        {
+            "name": "Settings",
+            "icon": "box",
+            "dropdown": "1",
+            "slug": "",
+            "submenu": [
+                {
+                    "name": "Payout Settings",
+                    "icon": "menu",
+                    "slug": ""
+                }
+            ]
+        },
+        {
+            "navheader": "More Details",
+            "slug": ""
+        },
+        {
+            "name": "Messages",
+            "icon": "box",
+            "dropdown": "1",
+            "slug": "",
+            "submenu": [
+                {
+                    "name": "Compose Mail",
+                    "icon": "menu",
+                    "slug": ""
+                },
+                {
+                    "name": "Inboc",
+                    "icon": "menu",
+                    "slug": ""
+                },
+                {
+                    "name": "Sent",
+                    "icon": "menu",
+                    "slug": ""
+                }
+            ]
+        },
+        {
+            "name": "Presenatation",
+            "icon": "box",
+            "dropdown": "1",
+            "slug": ""
+        },
+        {
+            "name": "F.A.Q",
+            "icon": "box",
+            "dropdown": "1",
+            "slug": ""
+        },
+        {
+            "name": "Support",
+            "icon": "box",
+            "dropdown": "1",
+            "slug": ""
+        },
+        {
+            "name": "My Leads",
+            "icon": "box",
+            "dropdown": "1",
+            "slug": ""
+        },
+        {
+            "name": "Notification",
+            "icon": "box",
+            "dropdown": "1",
+            "slug": ""
+        },
+        {
+            "name": "View Event",
+            "icon": "box",
+            "dropdown": "1",
+            "slug": ""
+        },
+        {
+            "name": "News",
+            "icon": "box",
+            "dropdown": "1",
+            "slug": ""
+        },
+        {
+            "name": "Logout",
+            "icon": "box",
+            "dropdown": "1",
+            "slug": ""
+        }
+    ]
+}

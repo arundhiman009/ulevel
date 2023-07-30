@@ -19,17 +19,17 @@ use App\Http\Controllers\Customer\UserDashboardController;
 */
 
 Route::post('/login-account', [LoginController::class, 'login'])->name('login-account');
+Route::get('/', [LoginController::class, 'login_form'])->name('login_form');
 
 
 
-
-Route::group(['prefix' => 'backend'], function () {
-    Route::get('dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+Route::group(['prefix' => 'backend', 'middleware' => ['auth']], function () {
+    Route::get('dashboard', [DashboardController::class, 'dashboard'])->name('backend.dashboard');
     Route::get('user/form', [UserController::class, 'create'])->name('user-index');
     Route::get('user/user/', [UserController::class, 'index'])->name('user-index');
 });
 
 
 Route::group(['prefix' => 'customer'], function () {
-    Route::get('dashboard', [UserDashboardController::class, 'dashboard'])->name('dashboard');
+    Route::get('dashboard', [UserDashboardController::class, 'dashboard'])->name('customer.dashboard');
 });
