@@ -10,6 +10,7 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Jetstream\HasTeams;
 use Laravel\Sanctum\HasApiTokens;
+use  Validator;
 
 class User extends Authenticatable
 {
@@ -58,4 +59,13 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    protected static function loginValidation($data = [])
+    {
+        $validator = Validator::make($data, [
+            'email' => 'required|string|email',
+            'password' => 'required|string',
+        ]);
+        return $validator;
+    }
 }
