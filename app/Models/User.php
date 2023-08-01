@@ -68,4 +68,10 @@ class User extends Authenticatable
         ]);
         return $validator;
     }
+
+
+    public static function getPlacement($sponsor_id)
+    {
+        return parent::first();
+    }
 }

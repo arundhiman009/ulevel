@@ -6,7 +6,6 @@
 {{-- Page Css files --}}
 <link rel="stylesheet" href="{{ asset(mix('css/base/pages/authentication.css')) }}">
 @endsection
-
 @section('content')
 <div class="auth-wrapper auth-basic px-2">
   <div class="auth-inner my-2">
@@ -44,7 +43,7 @@
           @csrf
           <div class="mb-1 col-6">
             <label for="username" class="form-label">Username</label>
-            <input type="text" class="form-control @error('username ') is-invalid @enderror" id="username" name="username" placeholder="Username" aria-describedby="username " tabindex="1" autofocus value="{{ old('name') }}" />
+            <input type="text" class="form-control @error('username') is-invalid @enderror" id="username" name="username" placeholder="Username" aria-describedby="username" tabindex="1" autofocus value="{{ old('username') }}" />
             @error('username')
             <span class="invalid-feedback" role="alert">
               <strong>{{ $message }}</strong>
@@ -63,9 +62,8 @@
 
           <div class="mb-1 col-6">
             <label for="f_name" class="form-label">Sponser's Full Name</label>
-
-            <div class="input-group input-group-merge  @error('f_name') is-invalid @enderror">
-              <input type="text" class="form-control form-control-merge @error('f_name') is-invalid @enderror" id="f_name" name="f_name" placeholder="Full Name" aria-describedby="f_name" tabindex="3" />
+            <div class="input-group @error('f_name') is-invalid @enderror">
+              <input type="text" class="form-control form-control-merge @error('f_name') is-invalid @enderror" id="f_name" name="f_name" value="{{ old('f_name') }}" placeholder="Full Name" aria-describedby="f_name" tabindex="3" />
             </div>
             @error('f_name')
             <span class="invalid-feedback" role="alert">
@@ -75,16 +73,13 @@
           </div>
 
           <div class="mb-1 col-6">
-            <label for="email " class="form-label">Email</label>
-
-            <div class="input-group input-group-merge">
-              <input type="email" class="form-control form-control-merge" id="email" name="email " placeholder="Email" aria-describedby="email " tabindex="3" />
-              @error('email')
-              <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-              </span>
-              @enderror
-            </div>
+            <label for="email" class="form-label">Email</label>
+            <input type="text" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}" placeholder="Email" aria-describedby="email" tabindex="1" />
+            @error('email')
+            <span class="invalid-feedback" role="alert">
+              <strong>{{ $message }}</strong>
+            </span>
+            @enderror
           </div>
 
           <div class="mb-1 col-6">
@@ -96,6 +91,7 @@
             </span>
             @enderror
           </div>
+
           <div class="mb-1 col-6">
             <label for="l_name" class="form-label">Surname</label>
             <input type="text" class="form-control @error('l_name') is-invalid @enderror" id="l_name" name="l_name" placeholder="Surname" aria-describedby="l_name" tabindex="2" value="{{ old('l_name') }}" />
@@ -109,7 +105,7 @@
           <div class="mb-1 col-6">
             <label for="phone_code" class="form-label">country Code</label>
             <div class="input-group input-group-merge @error('phone_code') is-invalid @enderror">
-              <input type="number" class="form-control form-control-merge @error('phone_code') is-invalid @enderror" id="phone_code" name="phone_code" placeholder="Country Code" aria-describedby="phone_code" tabindex="3" />
+              <input type="number" class="form-control form-control-merge @error('phone_code') is-invalid @enderror" id="phone_code" name="phone_code" placeholder="Country Code" value="{{ old('phone_code') }}" aria-describedby="phone_code" tabindex="3" />
             </div>
             @error('phone_code')
             <span class="invalid-feedback" role="alert">
@@ -120,9 +116,8 @@
 
           <div class="mb-1 col-6">
             <label for="register-password-confirm" class="form-label">Mobile</label>
-
             <div class="input-group input-group-merge form-password-toggle">
-              <input type="password" class="form-control form-control-merge" id="phone" name="phone" placeholder="Mobile" aria-describedby="phone" tabindex="3" />
+              <input type="number" class="form-control @error('phone') is-invalid @enderror" id="phone" name="phone" placeholder="Mobile" value="{{ old('phone') }}" aria-describedby="phone" tabindex="3" />
               @error('phone')
               <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
@@ -130,28 +125,30 @@
               @enderror
             </div>
           </div>
+
           <div class="mb-1 col-6">
             <label for="register-username" class="form-label">Country</label>
-            <input type="text" class="form-control @error('country') is-invalid @enderror" id="country" name="country" placeholder="Country" aria-describedby="country" tabindex="1" autofocus value="{{ old('country') }}" />
+            <select class="form-select @error('country') is-invalid @enderror" name="country" id="country">
+              <option value="">Select country</option>
+              @foreach($countries as $country)
+              <option value="{{$country->id}}">{{$country->name}}</option>
+              @endforeach
+            </select>
             @error('country')
             <span class="invalid-feedback" role="alert">
               <strong>{{ $message }}</strong>
             </span>
             @enderror
           </div>
-          <div class="mb-1 col-6">
+
+          <div class="mb-1 col-6" id="state_div" style="display: none;">
             <label for="register-email" class="form-label">State</label>
-            <input type="text" class="form-control @error('email') is-invalid @enderror" id="register-email" name="email" placeholder="john@example.com" aria-describedby="register-email" tabindex="2" value="{{ old('email') }}" />
-            @error('email')
-            <span class="invalid-feedback" role="alert">
-              <strong>{{ $message }}</strong>
-            </span>
-            @enderror
+            <select class="form-select @error('state') is-invalid @enderror" name="state" id="state">
+            </select>
           </div>
 
           <div class="mb-1 col-6">
             <label for="register-password" class="form-label">City</label>
-
             <div class="input-group input-group-merge @error('city') is-invalid @enderror">
               <input type="text" class="form-control form-control-merge @error('city') is-invalid @enderror" id="city" name="city" placeholder="City" aria-describedby="city" tabindex="3" />
             </div>
@@ -173,40 +170,56 @@
             </span>
             @enderror
           </div>
-
           <div class="mb-1 col-6">
             <label for="register-password-confirm" class="form-label">Confirm Password</label>
-
             <div class="input-group input-group-merge form-password-toggle">
-              <input type="password" class="form-control form-control-merge" id="register-password-confirm" name="password_confirmation" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="register-password" tabindex="3" />
+              <input type="password" class="form-control form-control-merge @error('password_confirmation') is-invalid @enderror" id="register-password-confirm" name="password_confirmation" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="register-password" tabindex="3" />
               <span class="input-group-text cursor-pointer"><i data-feather="eye"></i></span>
             </div>
+            @error('password_confirmation')
+            <span class="invalid-feedback" role="alert">
+              <strong>{{ $message }}</strong>
+            </span>
+            @enderror
           </div>
-          <div class="mb-1 col-6">
-            <label for="register-password-confirm" class="form-label">Package</label>
 
-            <div class="input-group input-group-merge form-password-toggle">
-              <select class="form-select" id="disabledSelect">
-                <option>Green</option>
-                <option>Red</option>
-                <option>Blue</option>
+          <div class="mb-1 col-6">
+            <label for="register-password-confirm " class="form-label">Package</label>
+            <div class="input-group input-group-merge ">
+              <select class="form-select @error('package') is-invalid @enderror" name="package">
+                @foreach($packages as $package)
+                <option value="{{$package->id}}">{{$package->package_name. ' - $' .$package->package_amount}}</option>
+                @endforeach
               </select>
             </div>
+            @error('package')
+            <span class="invalid-feedback" role="alert">
+              <strong>{{ $message }}</strong>
+            </span>
+            @enderror
           </div>
           <div class="mb-1 col-6">
             <label for="register-password-confirm" class="form-label">Payment Options</label>
-
-            <div class="input-group input-group-merge form-password-toggle">
-              <select class="form-select" id="disabledSelect">
-                <option>Green</option>
-                <option>Red</option>
-                <option>Blue</option>
+            <div class="input-group input-group-merge ">
+              <select class="form-select @error('payment') is-invalid @enderror" name="payment">
+                <option value="free">Free</option>
+                <option value="paypal">Paypal</option>
+                <option value="stripe">Stripe</option>
+                <option value="bank">Manual</option>
+                <option value="coin">BTC/ETH/USDT</option>
+                <option value="epin">Epin</option>
               </select>
             </div>
+            @error('payment')
+            <span class="invalid-feedback" role="alert">
+              <strong>{{ $message }}</strong>
+            </span>
+            @enderror
           </div>
+
           <div class="mb-1 ">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="terms" name="terms" tabindex="4" />
+              <input class="form-check-input" type="checkbox" id="terms" name="terms" value="yes" tabindex="4" />
               <label class="form-check-label" for="terms">
                 I agree to the <a href="#" target="_blank">terms_of_service</a> and
                 <a href="#" target="_blank">privacy_policy</a>
@@ -248,4 +261,22 @@
     <!-- /Register basic -->
   </div>
 </div>
+@endsection
+
+@section('page-script')
+<script>
+  $("#country").change(function() {
+    var country_id = this.value;
+
+    $.ajax({
+
+      'url': '/countries/' + country_id,
+      'type': 'get', //the way you want to send data to your URL
+      success: function(data) {
+        $('#state_div').show();
+        $("#state").html(data);
+      },
+    });
+  });
+</script>
 @endsection

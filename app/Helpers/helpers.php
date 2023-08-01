@@ -4,6 +4,7 @@ namespace App\Helpers;
 
 use Config;
 use Illuminate\Support\Str;
+use App\Models\Setting;
 
 class Helper
 {
@@ -157,5 +158,15 @@ class Helper
                 }
             }
         }
+    }
+
+    public static function getRegisterFees()
+    {
+        return Setting::value('reg_fee');
+    }
+
+    public static function getCharityFees()
+    {
+        return Setting::value('initial_charity_fee');
     }
 }

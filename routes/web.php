@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Customer\UserDashboardController;
+use App\Http\Controllers\Controller;
 
 
 /*
@@ -23,6 +24,8 @@ Route::post('/login-account', [LoginController::class, 'login'])->name('login-ac
 Route::get('/', [LoginController::class, 'login_form'])->name('login_form');
 Route::get('/register', [RegisterController::class, 'register_form'])->name('register');
 Route::post('/register', [RegisterController::class, 'register'])->name('register');
+
+Route::get('/countries/{id}', [Controller::class, 'get_countries'])->name('get_countries');
 
 Route::group(['prefix' => 'backend', 'middleware' => ['auth']], function () {
     Route::get('dashboard', [DashboardController::class, 'dashboard'])->name('backend.dashboard');
