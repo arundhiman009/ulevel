@@ -131,7 +131,7 @@
             <select class="form-select @error('country') is-invalid @enderror" name="country" id="country">
               <option value="">Select country</option>
               @foreach($countries as $country)
-              <option value="{{$country->id}}">{{$country->name}}</option>
+              <option value="{{$country->name}}" data-id="{{$country->id}}">{{$country->name}}</option>
               @endforeach
             </select>
             @error('country')
@@ -266,12 +266,11 @@
 @section('page-script')
 <script>
   $("#country").change(function() {
-    var country_id = this.value;
-
+    var country_id = $(this).find(":selected").attr('data-id');
     $.ajax({
 
       'url': '/countries/' + country_id,
-      'type': 'get', //the way you want to send data to your URL
+      'type': 'get', 
       success: function(data) {
         $('#state_div').show();
         $("#state").html(data);

@@ -21,11 +21,11 @@ class RegisterController extends Controller
 
     public function register(Request $request)
     {
-        dd(User::getPlacement(1));
+        
         $validator = Validator::make($request->all(), [
             'username' => ['required', 'string', 'max:255', 'unique:users'],
             'sponsor_id' => ['required', 'string'],
-            'email' => ['required', 'string', 'email'],
+            'email' => ['required', 'string', 'email', 'unique:users'],
             'f_name' => ['required', 'string'],
             'l_name' => ['required', 'string'],
             'phone_code' => ['required', 'string'],
@@ -44,11 +44,14 @@ class RegisterController extends Controller
                 ->withErrors($validator)
                 ->withInput();
         }
+     
         $user = new User;
         $user->username         = $request->username;
         $user->user_id          = $this->randomID();
         $user->sponsor_id       = $request->sponsor_id;
+        $user->placement_id     = $request->sponsor_id;
         $user->email            = $request->email;
+        $user->password         = bcrypt($request->password);
         $user->f_name           = $request->f_name;
         $user->l_name           = $request->l_name;
         $user->phone_code       = $request->phone_code;
@@ -57,12 +60,21 @@ class RegisterController extends Controller
         $user->state            = $request->state;
         $user->city             = $request->city;
         $user->password         = $request->password;
-        $user->package          = $request->package;
-        $user->payment          = $request->payment;
-        $user->reg_fee          = Helper::getRegisterFees();
+        $user->package_id       = $request->package;
+        $user->payment_method   = $request->payment;
+        $user->invest_amount    = 0;
+        $user->commission_balance    = 0;
+        $user->picture_url =  "";
+        $user->trans_password = "";
+        $user->turnover = 0;
+        $user->rank_id = 0;
+        $user->total_ref_count = 0;
+        $user->qr_url = "";
+        $user->google_secret = "";
         $user->vacant           =  "no";
-
-        dd($request->all());
+        dd($user);
+        $user->save();
+        return redirect()->route('login_form');
     }
 
     public function randomID($mode = 2, $len = 6)
