@@ -74,7 +74,7 @@
 
           <div class="mb-1 col-6">
             <label for="email" class="form-label">Email</label>
-            <input type="text" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}" placeholder="Email" aria-describedby="email" tabindex="1" />
+            <input type="text" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}" placeholder="Email" aria-describedby="email" tabindex="4" />
             @error('email')
             <span class="invalid-feedback" role="alert">
               <strong>{{ $message }}</strong>
@@ -84,7 +84,7 @@
 
           <div class="mb-1 col-6">
             <label for="f_name" class="form-label">First Name</label>
-            <input type="text" class="form-control @error('f_name') is-invalid @enderror" id="f_name" name="f_name" placeholder="First Name" aria-describedby="f_name" tabindex="1" autofocus value="{{ old('f_name') }}" />
+            <input type="text" class="form-control @error('f_name') is-invalid @enderror" id="f_name" name="f_name" placeholder="First Name" aria-describedby="f_name" tabindex="5" autofocus value="{{ old('f_name') }}" />
             @error('f_name')
             <span class="invalid-feedback" role="alert">
               <strong>{{ $message }}</strong>
@@ -94,7 +94,7 @@
 
           <div class="mb-1 col-6">
             <label for="l_name" class="form-label">Surname</label>
-            <input type="text" class="form-control @error('l_name') is-invalid @enderror" id="l_name" name="l_name" placeholder="Surname" aria-describedby="l_name" tabindex="2" value="{{ old('l_name') }}" />
+            <input type="text" class="form-control @error('l_name') is-invalid @enderror" id="l_name" name="l_name" placeholder="Surname" aria-describedby="l_name" tabindex="6" value="{{ old('l_name') }}" />
             @error('l_name')
             <span class="invalid-feedback" role="alert">
               <strong>{{ $message }}</strong>
@@ -105,7 +105,7 @@
           <div class="mb-1 col-6">
             <label for="phone_code" class="form-label">country Code</label>
             <div class="input-group input-group-merge @error('phone_code') is-invalid @enderror">
-              <input type="number" class="form-control form-control-merge @error('phone_code') is-invalid @enderror" id="phone_code" name="phone_code" placeholder="Country Code" value="{{ old('phone_code') }}" aria-describedby="phone_code" tabindex="3" />
+              <input type="number" class="form-control form-control-merge @error('phone_code') is-invalid @enderror" id="phone_code" name="phone_code" placeholder="Country Code" value="{{ old('phone_code') }}" aria-describedby="phone_code" tabindex="7" />
             </div>
             @error('phone_code')
             <span class="invalid-feedback" role="alert">
@@ -117,7 +117,7 @@
           <div class="mb-1 col-6">
             <label for="register-password-confirm" class="form-label">Mobile</label>
             <div class="input-group input-group-merge form-password-toggle">
-              <input type="number" class="form-control @error('phone') is-invalid @enderror" id="phone" name="phone" placeholder="Mobile" value="{{ old('phone') }}" aria-describedby="phone" tabindex="3" />
+              <input type="number" class="form-control @error('phone') is-invalid @enderror" id="phone" name="phone" placeholder="Mobile" value="{{ old('phone') }}" aria-describedby="phone" tabindex="8" />
               @error('phone')
               <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
@@ -128,7 +128,7 @@
 
           <div class="mb-1 col-6">
             <label for="register-username" class="form-label">Country</label>
-            <select class="form-select @error('country') is-invalid @enderror" name="country" id="country">
+            <select class="form-select @error('country') is-invalid @enderror" name="country" id="country" tabindex="9">
               <option value="">Select country</option>
               @foreach($countries as $country)
               <option value="{{$country->name}}" data-id="{{$country->id}}">{{$country->name}}</option>
@@ -150,7 +150,7 @@
           <div class="mb-1 col-6">
             <label for="register-password" class="form-label">City</label>
             <div class="input-group input-group-merge @error('city') is-invalid @enderror">
-              <input type="text" class="form-control form-control-merge @error('city') is-invalid @enderror" id="city" name="city" placeholder="City" aria-describedby="city" tabindex="3" />
+              <input type="text" class="form-control form-control-merge @error('city') is-invalid @enderror" id="city" name="city" placeholder="City" aria-describedby="city" tabindex="10" />
             </div>
             @error('city')
             <span class="invalid-feedback" role="alert">
@@ -161,7 +161,7 @@
           <div class="mb-1 col-6">
             <label for="register-password" class="form-label">Password</label>
             <div class="input-group input-group-merge form-password-toggle @error('password') is-invalid @enderror">
-              <input type="password" class="form-control form-control-merge @error('password') is-invalid @enderror" id="register-password" name="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="register-password" tabindex="3" />
+              <input type="password" class="form-control form-control-merge @error('password') is-invalid @enderror" id="register-password" name="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="register-password" tabindex="11" />
               <span class="input-group-text cursor-pointer"><i data-feather="eye"></i></span>
             </div>
             @error('password')
@@ -173,7 +173,7 @@
           <div class="mb-1 col-6">
             <label for="register-password-confirm" class="form-label">Confirm Password</label>
             <div class="input-group input-group-merge form-password-toggle">
-              <input type="password" class="form-control form-control-merge @error('password_confirmation') is-invalid @enderror" id="register-password-confirm" name="password_confirmation" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="register-password" tabindex="3" />
+              <input type="password" class="form-control form-control-merge @error('password_confirmation') is-invalid @enderror" id="register-password-confirm" name="password_confirmation" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="register-password" tabindex="12" />
               <span class="input-group-text cursor-pointer"><i data-feather="eye"></i></span>
             </div>
             @error('password_confirmation')
@@ -186,7 +186,7 @@
           <div class="mb-1 col-6">
             <label for="register-password-confirm " class="form-label">Package</label>
             <div class="input-group input-group-merge ">
-              <select class="form-select @error('package') is-invalid @enderror" name="package">
+              <select class="form-select @error('package') is-invalid @enderror" name="package" tabindex="13">
                 @foreach($packages as $package)
                 <option value="{{$package->id}}">{{$package->package_name. ' - $' .$package->package_amount}}</option>
                 @endforeach
@@ -201,7 +201,7 @@
           <div class="mb-1 col-6">
             <label for="register-password-confirm" class="form-label">Payment Options</label>
             <div class="input-group input-group-merge ">
-              <select class="form-select @error('payment') is-invalid @enderror" name="payment">
+              <select class="form-select @error('payment') is-invalid @enderror" name="payment" tabindex="14">
                 <option value="free">Free</option>
                 <option value="paypal">Paypal</option>
                 <option value="stripe">Stripe</option>
@@ -219,14 +219,14 @@
 
           <div class="mb-1 ">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="terms" name="terms" value="yes" tabindex="4" />
+              <input class="form-check-input" type="checkbox" id="terms" name="terms" value="yes" tabindex="15" />
               <label class="form-check-label" for="terms">
                 I agree to the <a href="#" target="_blank">terms_of_service</a> and
                 <a href="#" target="_blank">privacy_policy</a>
               </label>
             </div>
           </div>
-          <button type="submit" class="btn btn-primary w-100" tabindex="5">Sign up</button>
+          <button type="submit" class="btn btn-primary w-100" tabindex="16">Sign up</button>
         </form>
 
         <p class="text-center mt-2">
@@ -270,7 +270,7 @@
     $.ajax({
 
       'url': '/countries/' + country_id,
-      'type': 'get', 
+      'type': 'get',
       success: function(data) {
         $('#state_div').show();
         $("#state").html(data);

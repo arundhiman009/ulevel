@@ -12,11 +12,11 @@
               @endif
             </span>
             <span class="user-status">
-              Admin
+              Customer
             </span>
           </div>
           <span class="avatar">
-            <img class="round" src="{{ Auth::user() ? Auth::user()->profile_photo_url : asset('images/portrait/small/avatar-s-11.jpg') }}" alt="avatar" height="40" width="40">
+            <img class="round" src="{{ asset('images/portrait/small/avatar-s-11.jpg') }}" alt="avatar" height="40" width="40">
             <span class="avatar-status-online"></span>
           </span>
         </a>

@@ -9,6 +9,7 @@ use App\Models\Country;
 use Illuminate\Support\Facades\Validator;
 use App\Helpers\Helper;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class RegisterController extends Controller
 {
@@ -21,7 +22,7 @@ class RegisterController extends Controller
 
     public function register(Request $request)
     {
-        
+        //dd(Hash::make($request->password));
         $validator = Validator::make($request->all(), [
             'username' => ['required', 'string', 'max:255', 'unique:users'],
             'sponsor_id' => ['required', 'string'],
@@ -44,14 +45,14 @@ class RegisterController extends Controller
                 ->withErrors($validator)
                 ->withInput();
         }
-     
+
         $user = new User;
         $user->username         = $request->username;
         $user->user_id          = $this->randomID();
         $user->sponsor_id       = $request->sponsor_id;
         $user->placement_id     = $request->sponsor_id;
         $user->email            = $request->email;
-        $user->password         = bcrypt($request->password);
+        $user->password         = Hash::make($request->password);
         $user->f_name           = $request->f_name;
         $user->l_name           = $request->l_name;
         $user->phone_code       = $request->phone_code;
@@ -59,7 +60,6 @@ class RegisterController extends Controller
         $user->country          = $request->country;
         $user->state            = $request->state;
         $user->city             = $request->city;
-        $user->password         = $request->password;
         $user->package_id       = $request->package;
         $user->payment_method   = $request->payment;
         $user->invest_amount    = 0;
@@ -72,9 +72,8 @@ class RegisterController extends Controller
         $user->qr_url = "";
         $user->google_secret = "";
         $user->vacant           =  "no";
-        dd($user);
         $user->save();
-        return redirect()->route('login_form');
+        return redirect()->route('login_form')->with('status', "User registered successfully");
     }
 
     public function randomID($mode = 2, $len = 6)
