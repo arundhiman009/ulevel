@@ -37,16 +37,17 @@ class LoginController extends Controller
         if (!$user) {
             return back()->with('status', "User does not exist");
         }
-        // if (!Auth::attempt($request->only('email', 'password'))) {
-        //     return back()->with('status', "Passoword wrong");
-        // }
-        Auth::login($user);
+        if (!Auth::attempt($request->only('email', 'password'))) {
+            return back()->with('status', "Passoword wrong");
+        }
+
+        // Auth::login($user);
         if (auth::user()->role == 1) {
             return redirect()->route('backend.dashboard');
         } else if (auth::user()->role == 2) {
             return redirect()->route('customer.dashboard');
         } else {
-            return redirect()->route('login-account');
+            return redirect()->route('login_form');
         }
     }
 }
