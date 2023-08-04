@@ -52,7 +52,7 @@
           </div>
           <div class="mb-1 col-6">
             <label for="sponsor_id" class="form-label">Sponser Id</label>
-            <input type="number" class="form-control @error('sponsor_id') is-invalid @enderror" id="sponsor_id" name="sponsor_id" placeholder="Sponser Id" aria-describedby="sponsor_id" tabindex="2" value="{{ old('sponsor_id') }}" />
+            <input type="text" class="form-control @error('sponsor_id') is-invalid @enderror" id="sponsor_id" name="sponsor_id" placeholder="Sponser Id" aria-describedby="sponsor_id" tabindex="2" value="{{ old('sponsor_id') }}" />
             @error('sponsor_id')
             <span class="invalid-feedback" role="alert">
               <strong>{{ $message }}</strong>
@@ -61,11 +61,11 @@
           </div>
 
           <div class="mb-1 col-6">
-            <label for="f_name" class="form-label">Sponser's Full Name</label>
-            <div class="input-group @error('f_name') is-invalid @enderror">
-              <input type="text" class="form-control form-control-merge @error('f_name') is-invalid @enderror" id="f_name" name="f_name" value="{{ old('f_name') }}" placeholder="Full Name" aria-describedby="f_name" tabindex="3" />
+            <label for="s_name" class="form-label">Sponser's Full Name</label>
+            <div class="input-group @error('s_name') is-invalid @enderror">
+              <input type="text" class="form-control form-control-merge @error('s_name') is-invalid @enderror" id="s_name" name="s_name" value="{{ old('s_name') }}" placeholder="Full Name" aria-describedby="f_name" tabindex="3" />
             </div>
-            @error('f_name')
+            @error('s_name')
             <span class="invalid-feedback" role="alert">
               <strong>{{ $message }}</strong>
             </span>
@@ -277,5 +277,22 @@
       },
     });
   });
+
+  $('input[name=sponsor_id]').blur(function(){
+      var sponser_id = $('input[name=sponsor_id]').val()
+      $.ajax({
+      'url': '/user/' + sponser_id,
+      'type': 'get', 
+      success: function(data) {
+        if(data.status){
+          $('input[name=s_name]').val(data.username)
+        }
+        else {
+            $('input[name=s_name]').val("")
+            alert("Sponser id is not valid")
+        }
+      },
+    });
+  })
 </script>
 @endsection

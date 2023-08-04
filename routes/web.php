@@ -26,6 +26,7 @@ Route::get('/register', [RegisterController::class, 'register_form'])->name('reg
 Route::post('/register', [RegisterController::class, 'register'])->name('register');
 
 Route::get('/countries/{id}', [Controller::class, 'get_countries'])->name('get_countries');
+Route::get('/user/{user_id}', [Controller::class, 'get_user_name'])->name('get_user_name');
 
 Route::group(['prefix' => 'backend', 'middleware' => ['auth']], function () {
     Route::get('dashboard', [DashboardController::class, 'dashboard'])->name('backend.dashboard');
