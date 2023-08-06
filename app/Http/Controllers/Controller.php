@@ -9,7 +9,6 @@ use Illuminate\Routing\Controller as BaseController;
 use App\Models\{
     Country,
     State,
-    User
 };
 
 class Controller extends BaseController
@@ -24,17 +23,5 @@ class Controller extends BaseController
             $options .= "<option value=" . $state->name . ">" . $state->name . "</option>";
         }
         return $options;
-    }
-
-    public function get_user_name($id)
-    {
-        $user = User::where('user_id', $id)->first();
-        $error = false;
-        $username ='';
-        if($user) {
-            $error = true;
-            $username = $user->f_name . " ". $user->l_name;
-        }
-        return ["status" => $error, 'username' => $username];
     }
 }

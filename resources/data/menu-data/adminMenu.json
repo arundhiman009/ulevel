@@ -73,19 +73,19 @@
             "slug": "",
             "submenu": [
                 {
-                    "url": "app/invoice/list",
+                    "url": "/backend/withdraw/pending_withdraw",
                     "name": "Pending Withdraw",
                     "icon": "circle",
                     "slug": "app-invoice-list"
                 },
                 {
-                    "url": "app/invoice/preview",
+                    "url": "/backend/withdraw/withdraw_list",
                     "name": "Withdraw List",
                     "icon": "circle",
                     "slug": "app-invoice-preview"
                 },
                 {
-                    "url": "app/invoice/edit",
+                    "url": "/backend/withdraw/cancelled_list",
                     "name": "Cancelled List",
                     "icon": "circle",
                     "slug": "app-invoice-edit"
@@ -129,19 +129,19 @@
                     "slug": "app-ecommerce-shop"
                 },
                 {
-                    "url": "app/ecommerce/details",
+                    "url": "/backend/package/package",
                     "name": "Package List",
                     "icon": "circle",
                     "slug": "app-ecommerce-details"
                 },
                 {
-                    "url": "app/ecommerce/wishlist",
+                    "url": "/backend/package/package_purchase_list",
                     "name": "Purchase List",
                     "icon": "circle",
                     "slug": "app-ecommerce-wishlist"
                 },
                 {
-                    "url": "app/ecommerce/wishlist",
+                    "url": "/backend/package/package_upgrade_list",
                     "name": "Upgrade List",
                     "icon": "circle",
                     "slug": "app-ecommerce-wishlist"
